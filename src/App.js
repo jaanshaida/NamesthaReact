@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Header from './Components/Header'
+import Body  from './Components/Body';
+
 
 const resList = [
     {
@@ -745,68 +748,18 @@ const resList = [
 //     </div>
 // );
 // console.log(jsxHeading)
-const styleCard = {
-    backgroundColor: "#f0f0f0",
-    
-}
 
 
-const Header = () => {
-    return (
-        <div className="header"> 
-            <div className="logo-container">
-                <img 
-                    className="logo" 
-                    // src="https://images.app.goo.gl/YniFPMbvx9HYVfHi6"
-                    src="https://www.clipartmax.com/png/small/227-2270733_a-local-food-pickup-and-delivery-service-for-restaurants-fast-delivery-vector.png"
-                />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contac Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-            
 
-        </div>
-    )
-}
-const RestaurantCard = (data) => {
-    const {name, cuisines, avgRating,cloudinaryImageId, costForTwo, sla} = data.restData
-    return (
-        <div className="res-card" style={styleCard}> 
-            <img 
-                className='res-logo'
-                alt="res-logo" 
-                src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId}/>
-            <h4>{name}</h4>
-            <h5>{cuisines.join(", ")}</h5>
-            <h5>{costForTwo + ",  " + avgRating + " start Rating"}</h5>
-            <h5>{sla.slaString + "delivery"}</h5>
-        </div>
-    )
 
-}
 
-const Body = () => {
-    return (
-        <div className='body'>
-            <div className='search'>Search</div> 
-            <div className='res-container'>
-                { resList.map(restaurant => (<RestaurantCard key={restaurant.info.id} restData={restaurant.info}/>))}
-            </div>
-        </div>
-    )
-}
 
 const AppLayout = () => {
     return (
         <div className="app">
             <Header/>
             <Body />
+            {/* <RestaurantCard /> */}
         </div>
     )
 }
