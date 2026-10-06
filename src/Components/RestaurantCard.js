@@ -13,7 +13,8 @@ const RestaurantCard = (data) => {
                 src={ CDN_URL + cloudinaryImageId}/>
             <h4>{name}</h4>
             <h5>{cuisines.join(", ")}</h5>
-            <h5>{costForTwo + ",  " + avgRating + " start Rating"}</h5>
+            <h5>{costForTwo + " " }</h5>
+            <h5>{avgRating + " start Rating"}</h5>
             <h5>{sla.slaString + "delivery"}</h5>
         </div>
     )
