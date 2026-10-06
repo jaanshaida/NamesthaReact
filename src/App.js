@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './Components/Header'
 import Body  from './Components/Body';
+import RestaurantCard from './Components/RestaurantCard';
+// import SttAndTts from './Components/SttAndTts';
 
 
 const resList = [
@@ -759,8 +761,9 @@ const AppLayout = () => {
         <div className="app">
             <Header/>
             <Body />
+            {/* <SttAndTts /> */}
             {/* <RestaurantCard /> */}
-        </div>
+        </div>    
     )
 }
 
@@ -783,5 +786,7 @@ const AppLayout = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(<AppLayout />)
+
+
 
  
